@@ -19,7 +19,9 @@ projects_map = {
     'ya_note': PathForTests(
         'django_testing/ya_note/notes/tests', ya_note_tests
     ),
-    'ya_news': PathForTests('django_testing/ya_news/news/pytest_tests', ya_news_tests)
+    'ya_news': PathForTests(
+        'django_testing/ya_news/news/pytest_tests', ya_news_tests
+    )
 }
 
 errors = []
