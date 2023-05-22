@@ -9,7 +9,7 @@ Dev
      │   ├── news
      │   │   ├── fixtures/
      │   │   ├── migrations/
-     │   │   ├── tests/          <- Директория с вашими тестами pytest для проекта ya_news
+     │   │   ├── pytest_tests/   <- Директория с вашими тестами pytest для проекта ya_news
      │   │   ├── __init__.py
      │   │   ├── admin.py
      │   │   ├── apps.py
@@ -24,11 +24,11 @@ Dev
      ├── ya_note
      │   ├── notes
      │   │   ├── migrations/
-     │   │   ├── pytest_tests/   <- Директория с вашими тестами unittest для проекта ya_note
+     │   │   ├── tests/          <- Директория с вашими тестами unittest для проекта ya_note
+     │   │   ├── __init__.py
      │   │   ├── admin.py
      │   │   ├── apps.py
      │   │   ├── forms.py
-     │   │   ├── __init__.py
      │   │   ├── models.py
      │   │   ├── urls.py
      │   │   └── views.py
