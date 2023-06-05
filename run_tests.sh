@@ -17,7 +17,7 @@ print_message () {
 
 if python -m flake8 --config=setup.cfg 1>&2;
 then
-    print_message " Проверка flake8 пройдена " "="
+    print_message " flake8 завершил проверку кода, ошибок не обнаружено " "="
     echo $LF 1>&2
     if python structure_test.py
     then
@@ -33,24 +33,25 @@ then
                 exit 0
             else
                 status=$?
-                print_message " Проверьте, что тесты для YaNote успешно выполняются " "=" 1
+                print_message " При запуске упали тесты для проекта YaNote. Проверьте тесты этого проекта " "=" 1
                 echo \`\`\` 1>&2
                 exit $status
             fi
         else
             status=$?
-            print_message " Проверьте, что тесты для YaNews успешно выполняются " "=" 1
+            print_message " При запуске упали тесты для проекта YaNews. Проверьте тесты этого проекта " "=" 1
             echo \`\`\` 1>&2
             exit $status
         fi
     else
         status=$?
+        print_message " Убедитесь, что написанные вами тесты скопированы в указанную в ТЗ директорию " "=" 1
         echo \`\`\` 1>&2
         exit $status
     fi
 else
     status=$?
-    print_message " Приведите код в соответствие с PEP8 " "=" 1
+    print_message " flake8 обнаружил ошибки, приведите код в соответствие с PEP8 " "=" 1
     echo \`\`\` 1>&2
     exit $status
 fi
