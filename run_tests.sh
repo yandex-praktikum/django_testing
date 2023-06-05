@@ -33,13 +33,13 @@ then
                 exit 0
             else
                 status=$?
-                print_message " При запуске упали тесты для проекта YaNote. Проверьте тесты этого проекта " "=" 1
+                print_message " При запуске упали ваши тесты для проекта YaNote. Проверьте тесты этого проекта " "=" 1
                 echo \`\`\` 1>&2
                 exit $status
             fi
         else
             status=$?
-            print_message " При запуске упали тесты для проекта YaNews. Проверьте тесты этого проекта " "=" 1
+            print_message " При запуске упали ваши тесты для проекта YaNews. Проверьте тесты этого проекта " "=" 1
             echo \`\`\` 1>&2
             exit $status
         fi
@@ -51,7 +51,7 @@ then
     fi
 else
     status=$?
-    print_message " flake8 обнаружил ошибки, приведите код в соответствие с PEP8 " "=" 1
+    print_message " flake8 обнаружил отклонения от стандартов, приведите код в соответствие с PEP8 " "=" 1
     echo \`\`\` 1>&2
     exit $status
 fi
